@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-600: #059669;
+  --color-primary-700: #047857;
+  --color-secondary-600: #2563eb;
+  --color-secondary-700: #1d4ed8;
+}
+
+/* 
+   MEETSYNC THEME ENGINE (TAILWIND 4 FIX)
+   Add this variant to ensure dark: utilities (dark:bg-slate-900 etc) 
+   apply when the .dark class is added to the <html> or <body> element.
+*/
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1e293b;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark {
+  color: #f1f5f9;
+  background-color: #0f172a;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Simplified background utilities */
+.bg-subtle {
+  background-color: #f8fafc;
+}
+
+.dark .bg-subtle {
+  background-color: #1e293b;
+}
+
+.card-simple {
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.dark .card-simple {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+}
